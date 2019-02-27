@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="aniongap_max <= 20.5\ngini = 0.1\nsamples = 29211\nvalue = [42701, 3448]\nclass = 0"] ;
+1 [label="albumin_min <= 2.5\ngini = 0.1\nsamples = 26164\nvalue = [38962, 2357]\nclass = 0"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="age <= 64.9\ngini = 0.3\nsamples = 1399\nvalue = [1845, 418]\nclass = 0"] ;
+1 -> 2 ;
+3 [label="gini = 0.2\nsamples = 679\nvalue = [980, 139]\nclass = 0"] ;
+2 -> 3 ;
+4 [label="gini = 0.4\nsamples = 720\nvalue = [865, 279]\nclass = 0"] ;
+2 -> 4 ;
+5 [label="albumin_min <= 3.0\ngini = 0.1\nsamples = 24765\nvalue = [37117, 1939]\nclass = 0"] ;
+1 -> 5 ;
+6 [label="gini = 0.2\nsamples = 2155\nvalue = [3097, 314]\nclass = 0"] ;
+5 -> 6 ;
+7 [label="gini = 0.1\nsamples = 22610\nvalue = [34020, 1625]\nclass = 0"] ;
+5 -> 7 ;
+8 [label="aniongap_min <= 25.5\ngini = 0.3\nsamples = 3047\nvalue = [3739, 1091]\nclass = 0"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="albumin_min <= 2.5\ngini = 0.3\nsamples = 2922\nvalue = [3666, 963]\nclass = 0"] ;
+8 -> 9 ;
+10 [label="gini = 0.5\nsamples = 388\nvalue = [354, 278]\nclass = 0"] ;
+9 -> 10 ;
+11 [label="gini = 0.3\nsamples = 2534\nvalue = [3312, 685]\nclass = 0"] ;
+9 -> 11 ;
+12 [label="aniongap_max <= 30.5\ngini = 0.5\nsamples = 125\nvalue = [73, 128]\nclass = 1"] ;
+8 -> 12 ;
+13 [label="gini = 0.5\nsamples = 52\nvalue = [40, 39]\nclass = 0"] ;
+12 -> 13 ;
+14 [label="gini = 0.4\nsamples = 73\nvalue = [33, 89]\nclass = 1"] ;
+12 -> 14 ;
+}
