@@ -1,0 +1,9 @@
+-- Part B - Fun with regular expressions
+
+-- The following queries extract the echo notes dataset for the regular expression NLP exercises.
+-- The SQL code below should work direcly in Query Builder: https://querybuilder-lcp.mit.edu
+
+SELECT row_id, subject_id, hadm_id, text
+FROM noteevents
+WHERE CATEGORY = 'Echo'
+LIMIT 10;

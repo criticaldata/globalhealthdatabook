@@ -1,0 +1,14 @@
+-- Part C - Sentence tokenization and negation detection
+
+-- The following queries extract the CXR reports dataset for the pneumothorax detection NLP exercises.
+-- The SQL code below should work direcly in Query Builder: https://querybuilder-lcp.mit.edu
+
+SELECT row_id, subject_id, hadm_id, description, text
+FROM NOTEEVENTS 
+WHERE description IN (
+'P CHEST (PORTABLE AP) PORT',  'P CHEST PORT. LINE PLACEMENT PORT', 'TRAUMA #3 (PORT CHEST ONLY)', 'OP CHEST (SINGLE VIEW) IN O.R. PORT', 'P CHEST (PRE-OP AP ONLY) PORT',
+'CHEST PORT. LINE PLACEMENT', 'CHEST PORTABLE LINE PLACMENT', 'P CHEST (SINGLE VIEW) PORT',
+'CHEST AP ONLY', 'O CHEST SGL VIEW/LINE PLACEMENT IN O.R.', 'CHEST (PORTABLE AP)',
+'PO CHEST (SINGLE VIEW) PORT IN O.R.', 'O CHEST (PORTABLE AP) IN O.R.', 'CHEST (PRE-OP AP ONLY)',
+'CHEST (SINGLE VIEW)', 'P CHEST SGL VIEW/LINE PLACEMENT PORT')
+LIMIT 100;

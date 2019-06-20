@@ -1,0 +1,14 @@
+-- Part A - Spotting NASH
+
+-- The following queries extract the notes dataset for the Spotting NASH NLP exercises.
+-- The SQL code below should work direcly in Query Builder: https://querybuilder-lcp.mit.edu
+
+SELECT SETSEED(0.5);
+SELECT *, RANDOM() as random_id 
+FROM (        
+    SELECT row_id, subject_id, text 
+    FROM noteevents 
+    WHERE text LIKE '%cirrhosis%' 
+    ORDER BY row_id, subject_id 
+    LIMIT 1000
+) A;
